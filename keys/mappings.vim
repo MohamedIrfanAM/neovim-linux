@@ -28,7 +28,8 @@ else
   " I hate escape more than anything else
   inoremap jk <Esc>
   inoremap kj <Esc>
-
+  inoremap jj <Esc>
+  
   " Easy CAPS
   " inoremap <c-u> <ESC>viwUi
   " nnoremap <c-u> viwU<Esc>
@@ -43,7 +44,7 @@ else
   " shift + j to move down
   xnoremap K :move '<-2<CR>gv-gv
   xnoremap J :move '>+1<CR>gv-gv
-
+  
   " Alternate way to save
   nnoremap <silent> <C-s> :w<CR>
   " Alternate way to quit
@@ -95,3 +96,5 @@ endif
 " Better nav for omnicomplete
 inoremap <expr> <c-j> ("\<C-n>")
 inoremap <expr> <c-k> ("\<C-p>")
+inoremap <expr> fl getline('.')[col('.')-1] =~? '[]>)}''"`]' ? '<right>' : '<right>' 
+inoremap <expr> lf getline('.')[col('.')-1] =~? '[]>)}''"`]' ? '<right>' : '<right>' 
