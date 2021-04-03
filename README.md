@@ -1,4 +1,8 @@
-# NVCode
+# My Neovim config
+
+### Not in lua
+
+### Forked from @ChristianChiarulli
 
 ![NVCode pic](./utils/images/nvim.png)
 
@@ -186,47 +190,3 @@ You can install it on multiple platforms:
 I recommend using this alongside the VSCode `which-key` extension
 
 Along with some of my config files you can find in `utils/vscode_config`
-
-## TODO
-
-- Better Documentation
-  https://github.com/gennaro-tedesco/nvim-jqx
-  https://github.com/nathunsmitty/nvim-ale-diagnostic
-  https://github.com/mattn/efm-langserver
-  https://github.com/windwp/nvim-ts-closetag
-  https://github.com/nvim-telescope/telescope-media-files.nvim
-  https://github.com/kosayoda/nvim-lightbulb
-  https://github.com/ms-jpq/chadtree
-  https://github.com/b3nj5m1n/kommentary
-  https://github.com/glepnir/lspsaga.nvim
-  https://github.com/nvim-lua/completion-nvim
-  https://github.com/nvim-telescope/telescope-frecency.nvim
-
-## CoC extensions to check out
-
-- coc-fzf-preview
-  - https://github.com/yuki-ycino/fzf-preview.vim/
-- coc-floaterm
-
-## 0.5
-
-- native lsp
-- treesitter
-
-## LOW PRIORITY TODO
-
-If anyone reading this has any suggestions about implementing any of the following I will accept a PR, but these are not priority.
-
-- ale
-- multiple cursors
-- markdown table
-- galaxyline automatically grab colors from colorscheme
-- tpope/vim-dadbod
-- neovide
-- People asked about vimwiki I kinda hate it but maybe I'll add it
-- vimspector this is included but I don't plan on using it much
-  - can be used with jdb, pdb, gdb, etc...
-- nvim-dap and nvim-dap-virtual-text (ALL DEBUGGING IN NEOVIM IS CONFUSING AND HARD TO GET WORKING OR I'M JUST DUMB)
-- later manually link pylance
-- resize with arrows in addition to meta
-- how to support meta key on for macOS?
