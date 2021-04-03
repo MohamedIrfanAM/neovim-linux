@@ -5,18 +5,7 @@
 ### Forked from @ChristianChiarulli
 
 ![NVCode pic](./utils/images/nvim.png)
-
-## Install in one command
-
-The following will install this config if you have an existing config it will move it to `~/.config/nvim.old`
-
-This script only supports Mac, Ubuntu and Arch
-
-```
-bash <(curl -s https://raw.githubusercontent.com/ChristianChiarulli/nvim/master/utils/install.sh)
-```
-
-## Install Neovim
+![Neovim pic](./utils/images/Neovim.png)
 
 - Mac
 
@@ -45,7 +34,7 @@ bash <(curl -s https://raw.githubusercontent.com/ChristianChiarulli/nvim/master/
 ## Clone this repo into your config
 
 ```
-git clone https://github.com/ChristianChiarulli/nvim.git ~/.config/nvim
+git clone https://github.com/MohamedIrfanAM/neovim-linux.git ~/.config/nvim
 ```
 
 ## Install python & node support
