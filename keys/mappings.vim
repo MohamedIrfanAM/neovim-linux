@@ -21,6 +21,14 @@ if exists('g:vscode')
 
 else
 
+  nnoremap <a-t> :Test<CR>
+  nnoremap <a-T> :Test[
+  nnoremap <a-d> :Debug<CR>
+  nnoremap <a-D> :Debug[
+  nnoremap <a-s> :Submit<CR>
+  nnoremap <a-r> :Rtest<CR>
+  nnoremap <a-R> :Rtest[
+
   " Better nav for omnicomplete
   inoremap <expr> <c-j> ("\<C-n>")
   inoremap <expr> <c-k> ("\<C-p>")

@@ -29,7 +29,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'ChristianChiarulli/vscode-easymotion'
     Plug 'machakann/vim-highlightedyank'
   else
-
+    " Cpbooster
+    Plug 'searleser97/cpbooster.vim'
+    " FireNVIM
     Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
     " Easymotion
     Plug 'easymotion/vim-easymotion'
