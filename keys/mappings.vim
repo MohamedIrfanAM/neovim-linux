@@ -21,6 +21,7 @@ if exists('g:vscode')
 
 else
 
+" For CPbooster
   nnoremap <a-t> :Test<CR>
   nnoremap <a-T> :Test[
   nnoremap <a-d> :Debug<CR>
@@ -28,6 +29,11 @@ else
   nnoremap <a-s> :Submit<CR>
   nnoremap <a-r> :Rtest<CR>
   nnoremap <a-R> :Rtest[
+
+  " Vscode like opening and closing
+  nnoremap <C-e> :CocCommand explorer --toggle --sources=file+<CR>
+  noremap <C-w> :tabclose<CR>
+  nnoremap <C-o> :RnvimrToggle<CR>
 
   " Better nav for omnicomplete
   inoremap <expr> <c-j> ("\<C-n>")
