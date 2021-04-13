@@ -1,11 +1,12 @@
   set encoding=utf-8
   let g:airline_powerline_fonts = 1
-  let g:airline_theme = 'onedark'
+  " let g:airline_theme = 'onedark'
 
   let g:airline#extensions#tabline#enabled = 1
   
   let g:airline#extensions#tabline#buffer_nr_show = 1 
 
+let g:nord_uniform_status_lines = 0
 "
   if !exists('g:airline_symbols')
       let g:airline_symbols = {}
