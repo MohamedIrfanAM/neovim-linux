@@ -31,8 +31,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   else
     " Cpbooster
     Plug 'searleser97/cpbooster.vim'
-    " FireNVIM
-    Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
+    " " FireNVIM
+    " Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
     " Easymotion
     Plug 'easymotion/vim-easymotion'
     " Surround

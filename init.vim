@@ -22,7 +22,7 @@ if exists('g:vscode')
 else
 
   " Themes
-  source $HOME/.config/nvim/themes/syntax.vim
+  " source $HOME/.config/nvim/themes/syntax.vim
   source $HOME/.config/nvim/themes/airline.vim
   " source $HOME/.config/nvim/themes/onedark.vim    
   source $HOME/.config/nvim/themes/nord.vim   
