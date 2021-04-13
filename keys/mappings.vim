@@ -33,6 +33,7 @@ else
   " Vscode like opening and closing
   nnoremap <C-e> :CocCommand explorer --toggle --sources=file+<CR>
   noremap <C-w> :tabclose<CR>
+  noremap <C-w> :BufferClose<CR>
   nnoremap <C-o> :RnvimrToggle<CR>
 
   " Better nav for omnicomplete
