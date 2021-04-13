@@ -57,8 +57,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Plug 'christianchiarulli/nvcode-color-schemes.vim'
     " Intellisense
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    " Status Line
-    Plug 'glepnir/galaxyline.nvim'
+    " " Status Line
+    " Plug 'glepnir/galaxyline.nvim'
     Plug 'kevinhwang91/rnvimr'
     " FZF
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
