@@ -136,6 +136,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Plug 'jelera/vim-javascript-syntax'
     " Plugin Graveyard
       Plug 'joshdick/onedark.vim'
+      Plug 'arcticicestudio/nord-vim'
     " Debug
     " Plug 'mfussenegger/nvim-dap'
     " Plug 'nvim-dap-virtual-text'
