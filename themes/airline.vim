@@ -10,9 +10,11 @@
 
 " One dark thme
 " let g:airline_theme = 'onedark'
+
 " Nord theme
 let g:nord_uniform_status_lines = 0
 "
+" Airline symbols
   if !exists('g:airline_symbols')
       let g:airline_symbols = {}
       endif
