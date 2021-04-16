@@ -142,9 +142,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Plug 'nvim-dap-virtual-text'
     " Sneak
     " Plug 'justinmk/vim-sneak'
-      Plug 'nvim-treesitter/nvim-treesitter-refactor'
-      Plug 'nvim-treesitter/nvim-treesitter-textobjects'
-      Plug 'romgrk/nvim-treesitter-context'
+      " Plug 'nvim-treesitter/nvim-treesitter-refactor'
+      " Plug 'nvim-treesitter/nvim-treesitter-textobjects'
+      " Plug 'romgrk/nvim-treesitter-context'
     " Minimap
     " Plug 'wfxr/minimap.vim'
     " jsx syntax support
