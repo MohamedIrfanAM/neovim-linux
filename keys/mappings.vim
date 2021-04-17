@@ -29,6 +29,7 @@ else
   nnoremap <a-s> :Submit<CR>
   nnoremap <a-r> :Rtest<CR>
   nnoremap <a-R> :Rtest[
+  nnoremap <a-a> :Addtc<CR>
 
   " Vscode like opening and closing
   nnoremap <C-e> :CocCommand explorer --toggle --sources=file+<CR>
