@@ -23,12 +23,10 @@ else
 
 " For CPbooster
   nnoremap <a-t> :Test<CR>
-  nnoremap <a-T> :Test[
+  nnoremap <a-T> :Rtest<CR>
   nnoremap <a-d> :Debug<CR>
-  nnoremap <a-D> :Debug[
+  nnoremap <a-D> :Rdebug<CR>
   nnoremap <a-s> :Submit<CR>
-  nnoremap <a-r> :Rtest<CR>
-  nnoremap <a-R> :Rtest[
   nnoremap <a-a> :Addtc<CR>
 
   " Vscode like opening and closing
