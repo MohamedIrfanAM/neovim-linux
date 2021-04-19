@@ -1,9 +1,5 @@
 " Basic Key Mappings
 
-imap <C-h> <C-w>h
-imap <C-j> <C-w>j
-imap <C-k> <C-w>k
-imap <C-l> <C-w>l
 " g Leader key
 let mapleader=" "
 " let localleader=" "
@@ -36,8 +32,8 @@ else
   nnoremap <C-o> :RnvimrToggle<CR>
 
   " Better nav for omnicomplete
-  inoremap <expr> <c-j> ("\<C-n>")
-  inoremap <expr> <c-k> ("\<C-p>")
+  inoremap <expr> <C-j> ("\<C-n>")
+  inoremap <expr> <C-k> ("\<C-p>")
 
   " I hate escape more than anything else
   inoremap jk <Esc>
@@ -107,8 +103,9 @@ else
 
 endif
 
-" Better nav for omnicomplete
-inoremap <expr> <c-j> ("\<C-n>")
-inoremap <expr> <c-k> ("\<C-p>")
+" lf and fl for right arrow 
 inoremap <expr> fl getline('.')[col('.')-1] =~? '[]>)}''"`]' ? '<right>' : '<right>' 
 inoremap <expr> lf getline('.')[col('.')-1] =~? '[]>)}''"`]' ? '<right>' : '<right>' 
+
+" Y to yank upto end of line
+map Y <Esc>y$
