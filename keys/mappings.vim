@@ -25,10 +25,26 @@ else
   nnoremap <a-s> :Submit<CR>
   nnoremap <a-a> :Addtc<CR>
 
+  " Snippets 
+    " Use <C-l> for trigger snippet expand.
+  imap <C-l> <Plug>(coc-snippets-expand)
+
+  " Use <C-j> for select text for visual placeholder of snippet.
+  vmap <C-j> <Plug>(coc-snippets-select)
+
+  " Use <C-j> for jump to next placeholder, it's default of coc.nvim
+  let g:coc_snippet_next = '<c-j>'
+
+  " Use <C-k> for jump to previous placeholder, it's default of coc.nvim
+  let g:coc_snippet_prev = '<c-k>'
+
+  " Use <C-j> for both expand and jump (make expand higher priority.)
+  imap <C-j> <Plug>(coc-snippets-expand-jump)
+
   " Vscode like opening and closing
   nnoremap <C-e> :CocCommand explorer --toggle --sources=file+<CR>
   noremap <C-w> :tabclose<CR>
-  noremap <C-w> :BufferClose<CR>
+  noremap <C-w> :Bclose<CR>
   nnoremap <C-o> :RnvimrToggle<CR>
 
   " Better nav for omnicomplete

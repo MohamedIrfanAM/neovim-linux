@@ -80,7 +80,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " " Zen mode for writing article or stuff
     " Plug 'junegunn/goyo.vim'
     " Snippets
-    " Plug 'honza/vim-snippets'
+    Plug 'honza/vim-snippets'
     " Plug 'mattn/emmet-vim'
     " " Interactive code -- live preview of code
     " Plug 'metakirby5/codi.vim'
