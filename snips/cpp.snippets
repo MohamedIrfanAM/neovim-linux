@@ -1,19 +1,48 @@
 snippet inp "Input in to an array" b
-${1:VariableType} ${2:Name}[${3:Nums}];
+${1:int} ${2:arr}[${3:n}];
 for(int i = 0; i < $3; i++)
 {
 	cin >> $2[i];
 }
+${0}
 endsnippet
 
-snippet forfor "Nested Loop" A
+snippet forfor "Nested Loop" A 
 for(int i = 0; i < ${1:Count1}; i++)
 {
 	for(int j = 0; j < ${2:Count1}; j++)
 	{
-		$3;
+		${VISUAL}$3
 	}
 }
 endsnippet
 		
+snippet fori "For Loop with i" A
+for(int ${3:i} = 0; $3 < ${1:count}; $3${4:++}) 
+{
+	${VISUAL}${2}${5}
+}
+endsnippet
+
+snippet for "For loop" b
+for (int ${2:i} = 0; $2 < ${1:count}; ${3:$2++})
+{
+	${VISUAL}${4}
+}
+endsnippet
+
+snippet v "Declare a Vector" i
+vector <${1:int}> ${2:v}${0};
+endsnippet
+
+snippet p "Declare a pair" i
+pair <${1:int},${2:int}> ${3:p}${0};
+endsnippet
+
+snippet s "Declare a Set" i
+set <${1:int}> ${2:s}${0};
+endsnippet
 	
+snippet m "Declare a Map" i
+map <${1:int},${2:int}> ${3:m}${0};
+endsnippet

@@ -26,20 +26,26 @@ else
   nnoremap <a-a> :Addtc<CR>
 
   " Snippets 
-    " Use <C-l> for trigger snippet expand.
-  imap <C-l> <Plug>(coc-snippets-expand)
+  inoremap <silent><expr> <TAB>
+      \ pumvisible() ? coc#_select_confirm() :
+      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
 
-  " Use <C-j> for select text for visual placeholder of snippet.
-  vmap <C-j> <Plug>(coc-snippets-select)
+  function! s:check_back_space() abort
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~# '\s'
+  endfunction
 
-  " Use <C-j> for jump to next placeholder, it's default of coc.nvim
-  let g:coc_snippet_next = '<c-j>'
+  " Use <TAB> for jump to next placeholder, it's default of coc.nvim
+  let g:coc_snippet_next = '<TAB>'
 
-  " Use <C-k> for jump to previous placeholder, it's default of coc.nvim
-  let g:coc_snippet_prev = '<c-k>'
+  " Use <S-TAB> for jump to previous placeholder, it's default of coc.nvim
+  let g:coc_snippet_prev = '<S-TAB>'
 
-  " Use <C-j> for both expand and jump (make expand higher priority.)
-  imap <C-j> <Plug>(coc-snippets-expand-jump)
+  " Use <TAB> for select text for visual placeholder of snippet.
+  vmap <TAB> <Plug>(coc-snippets-select)
+
 
   " Vscode like opening and closing
   nnoremap <C-e> :CocCommand explorer --toggle --sources=file+<CR>
@@ -47,7 +53,7 @@ else
   noremap <C-w> :Bclose<CR>
   nnoremap <C-o> :RnvimrToggle<CR>
 
-  " Better nav for omnicomplete
+  " Better nav for Coc Completion
   inoremap <expr> <C-j> ("\<C-n>")
   inoremap <expr> <C-k> ("\<C-p>")
 
@@ -75,10 +81,6 @@ else
   nnoremap <silent> <C-s> :w<CR>
   " Alternate way to quit
   nnoremap <silent> <C-Q> :wq!<CR>
-  " Use control-c instead of escape
-  nnoremap <silent> <C-c> <Esc>
-  " <TAB>: completion.
-  inoremap <silent> <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 
   " Better window navigation
   nnoremap <C-h> <C-w>h
@@ -92,17 +94,12 @@ else
   tnoremap <C-k> <C-\><C-N><C-w>k
   tnoremap <C-l> <C-\><C-N><C-w>l
   inoremap <C-h> <C-\><C-N><C-w>h
-  inoremap <C-j> <C-\><C-N><C-w>j
-  inoremap <C-k> <C-\><C-N><C-w>k
-  inoremap <C-l> <C-\><C-N><C-w>l
+  " inoremap <C-j> <C-\><C-N><C-w>j
+  " inoremap <C-k> <C-\><C-N><C-w>k
+  " inoremap <C-l> <C-\><C-N><C-w>l
   tnoremap <Esc> <C-\><C-n>
 
-  " Use alt + hjkl to resize windows
-  " nnoremap <silent> <M-j>    :resize -2<CR>
-  " nnoremap <silent> <M-k>    :resize +2<CR>
-  " nnoremap <silent> <M-h>    :vertical resize -2<CR>
-  " nnoremap <silent> <M-l>    :vertical resize +2<CR>
-
+  " Resizing windows
   nnoremap <silent> <C-Up>    :resize -2<CR>
   nnoremap <silent> <C-Down>  :resize +2<CR>
   nnoremap <silent> <C-Left>  :vertical resize -2<CR>
