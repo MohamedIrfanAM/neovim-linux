@@ -5,9 +5,6 @@ let mapleader=" "
 " let localleader=" "
 nnoremap <Space> <Nop>
 
-" Better indenting
-vnoremap < <gv
-vnoremap > >gv
 
 if exists('g:vscode')
 
@@ -25,7 +22,7 @@ else
   nnoremap <a-s> :Submit<CR>
   nnoremap <a-a> :Addtc<CR>
 
-  " Snippets 
+  " Snippets and auto completion from coc
   inoremap <silent><expr> <TAB>
       \ pumvisible() ? coc#_select_confirm() :
       \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
@@ -61,15 +58,10 @@ else
   inoremap jk <Esc>
   inoremap kj <Esc>
   inoremap jj <Esc>
-  
-  " Easy CAPS
-  " inoremap <c-u> <ESC>viwUi
-  " nnoremap <c-u> viwU<Esc>
 
-  " TAB in general mode will move to text buffer
-  nnoremap <silent> <TAB> :bnext<CR>
-  " SHIFT-TAB will go back
-  nnoremap <silent> <S-TAB> :bprevious<CR>
+  " Better indenting
+  vnoremap < <gv
+  vnoremap > >gv
 
   " Move selected line / block of text in visual mode
   " shift + k to move up
@@ -77,6 +69,11 @@ else
   xnoremap K :move '<-2<CR>gv-gv
   xnoremap J :move '>+1<CR>gv-gv
   
+  " TAB in general mode will move to text buffer
+  nnoremap <silent> <TAB> :bnext<CR>
+  " SHIFT-TAB will go back
+  nnoremap <silent> <S-TAB> :bprevious<CR>
+
   " Alternate way to save
   nnoremap <silent> <C-s> :w<CR>
   " Alternate way to quit
@@ -121,4 +118,4 @@ inoremap <expr> fl getline('.')[col('.')-1] =~? '[]>)}''"`]' ? '<right>' : '<rig
 inoremap <expr> lf getline('.')[col('.')-1] =~? '[]>)}''"`]' ? '<right>' : '<right>' 
 
 " Y to yank upto end of line
-map Y <Esc>y$
+nnoremap Y <Esc>y$
